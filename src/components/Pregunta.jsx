@@ -35,7 +35,7 @@ const Pregunta = (props) => {
     return ( 
         <Fragment>
             <h2>Coloca tu presupuesto</h2>
-            { error ? <Error/> : null}
+            { error ? <Error mensaje="El presupuesto fue incorrecto"/> : null}
             <form action="">
                 <div className="form-group">
                     {/* version corta de onChange de una sola lina */}
