@@ -14,15 +14,25 @@ function App() {
      <header>
        <h1>Gastos semanal</h1>
        <div className="contenido-principal contenido">
-         <Pregunta guardarPresupuesto={guardarPresupuesto} guardarRestante={guardarRestante} actualizarPregunta={actualizarPregunta}/>
-         <div className="row justify-content-center">
-           <div className="col-lg-6 lg-sm-12">
-            <Formulario/>
-           </div>
-           <div className="col-lg-6 lg-sm-12">
-            2
-           </div>
+         { mostrarpregunta ? 
+         (          
+            <Pregunta 
+            guardarPresupuesto={guardarPresupuesto} 
+            guardarRestante={guardarRestante} 
+            actualizarPregunta={actualizarPregunta}/>
+         )
+         :
+         (
+          <div className="row justify-content-center">
+            <div className="col-lg-6 lg-sm-12">
+              <Formulario/>
+            </div>
+            <div className="col-lg-6 lg-sm-12">
+              2
+            </div>
          </div>
+         )
+         }
        </div>
      </header>
     </div>
