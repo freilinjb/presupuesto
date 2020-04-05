@@ -4,7 +4,7 @@ import Error from './Error';
 //Se crea loca porque no pasa por los diferentes componentes
 //Definir el state
 
-const Pregunta = (props) => {
+const Pregunta = ({ guardarRestante, guardarPresupuesto}) => {
 
     const [ cantidad, guardarCantidad ] = useState(0);
     const [ error, setError ] = useState(false);
@@ -28,6 +28,8 @@ const Pregunta = (props) => {
 
         //si pasa la validacion
         setError(false);
+        guardarPresupuesto(cantidad) ;
+        guardarRestante(cantidad);
 
     }
 
