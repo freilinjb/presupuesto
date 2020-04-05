@@ -1,9 +1,15 @@
 import React from 'react';
+import Pregunta from './components/Pregunta';
 
 function App() {
   return (
-    <div>
-      <h1>Prueba</h1>
+    <div className="container">
+     <header>
+       <h1>Gastos semanal</h1>
+       <div className="contenido-principal contenido">
+         <Pregunta/>
+       </div>
+     </header>
     </div>
   );
 }
