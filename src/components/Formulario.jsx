@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import Error from './Error';
 
 const Formulario = () => {
 
@@ -29,6 +30,7 @@ const Formulario = () => {
     return ( 
         <form>
             <h4 className="titulo mt-3 p-2 bg-primary text-center text-white shadow rounded">Agrega tus gastos aquí</h4>
+            { error ? <Error mensaje ="Ambos campos son obligatorios o Presupuesto son Incorrectos"/> : null}
             <div className="form-group">
                 <label htmlFor="nombre">Nombre Gasto</label>
                 <input type="text" onChange={ e => guardarNombre(e.target.value) } value={nombre} name="nombre" className="form-control" placeholder="Ej. Transporte"/>
