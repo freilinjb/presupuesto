@@ -46,6 +46,7 @@ const Pregunta = ({ guardarRestante, guardarPresupuesto}) => {
                 </div>
                 <button onClick={agregarPresupuesto} type="submit" className="btn btn-block btn-primary">Definir presupuesto</button>
             </form>
+            <hr/>
         </Fragment>
      );
 }
