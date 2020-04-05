@@ -4,7 +4,7 @@ import Error from './Error';
 //Se crea loca porque no pasa por los diferentes componentes
 //Definir el state
 
-const Pregunta = ({ guardarRestante, guardarPresupuesto}) => {
+const Pregunta = ({ guardarRestante, guardarPresupuesto, actualizarPregunta}) => {
 
     const [ cantidad, guardarCantidad ] = useState(0);
     const [ error, setError ] = useState(false);
@@ -30,7 +30,8 @@ const Pregunta = ({ guardarRestante, guardarPresupuesto}) => {
         setError(false);
         guardarPresupuesto(cantidad) ;
         guardarRestante(cantidad);
-
+        actualizarPregunta(false);
+    
     }
 
     //version corta
