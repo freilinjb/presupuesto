@@ -4,6 +4,27 @@ const Formulario = () => {
 
     const [nombre, guardarNombre] = useState('');
     const [cantidad, guardarCantidad] = useState(0);
+    const [error, setError ] = useState(false);
+
+    //cuando el usuario agrerga un gasto
+    const agrergarGasto = e=> {
+        e.preventDefault();
+
+        //Valida
+        if(cantidad < 1 || isNaN(cantidad) || nombre.trim() === '') {
+            setError(true);
+            return;
+        }
+
+        
+
+        //Construir el gasto
+
+
+        //pasar el gasto al componente principal
+
+        //resetear el form
+    }
 
     return ( 
         <form>
