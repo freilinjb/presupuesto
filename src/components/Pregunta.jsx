@@ -1,4 +1,5 @@
 import React,{ Fragment, useState} from 'react'
+import Error from './Error';
 
 //Se crea loca porque no pasa por los diferentes componentes
 //Definir el state
@@ -34,6 +35,7 @@ const Pregunta = (props) => {
     return ( 
         <Fragment>
             <h2>Coloca tu presupuesto</h2>
+            { error ? <Error/> : null}
             <form action="">
                 <div className="form-group">
                     {/* version corta de onChange de una sola lina */}
