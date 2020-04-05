@@ -9,6 +9,14 @@ function App() {
   const [ restante, guardarRestante ] = useState(0);
   const [mostrarpregunta, actualizarPregunta] = useState(true);
 
+  const [ gastos, guardarGastos ] = useState([]);
+
+  //cuando agregamos un nuevo gasto
+  const agregarNuevoGasto = gasto => {
+      console.log(gasto);
+  }
+
+
   return (
     <div className="container">
      <header>
@@ -25,7 +33,7 @@ function App() {
          (
           <div className="row justify-content-center">
             <div className="col-lg-6 lg-sm-12">
-              <Formulario/>
+              <Formulario agregarNuevoGasto={agregarNuevoGasto}/>
             </div>
             <div className="col-lg-6 lg-sm-12">
               2
