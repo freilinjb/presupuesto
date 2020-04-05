@@ -16,7 +16,7 @@ const Formulario = () => {
             return;
         }
 
-        
+
 
         //Construir el gasto
 
@@ -37,7 +37,7 @@ const Formulario = () => {
                 <label htmlFor="cantidad">Cantidad Gasto</label>
                 <input onChange={ e=>guardarCantidad(parseInt(e.target.value,10))} value={cantidad} type="number" name="cantidad" className="form-control"/>
             </div>
-            <input type="submit" className="btn btn-block btn-primary" value="Agregar Gasto"/>
+            <input type="submit" onClick={agrergarGasto} className="btn btn-block btn-primary" value="Agregar Gasto"/>
         </form>
      );
 }
