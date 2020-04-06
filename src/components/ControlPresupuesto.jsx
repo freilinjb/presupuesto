@@ -1,6 +1,8 @@
 import React,{Fragment} from 'react';
 
 const ControlPresupuesto = ({presupuesto, restante}) => {
+    console.log(`Restante: CP: ${restante}`);
+    
     return ( 
         <Fragment>
             <div className="alert alert-primary"> 

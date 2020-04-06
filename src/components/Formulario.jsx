@@ -19,8 +19,6 @@ const Formulario = ({guardarGasto, guardarCrearGasto}) => {
         }
 
         setError(false);
-
-        console.log(cantidad);
         
         //Construir el gasto
         const gasto = {
@@ -42,10 +40,12 @@ const Formulario = ({guardarGasto, guardarCrearGasto}) => {
     return ( 
         <form>
             <h4 className="titulo mt-3 p-2 bg-primary text-center text-white shadow rounded">Agrega tus gastos aquí</h4>
+            
             { error ? <Error mensaje ="Ambos campos son obligatorios o Presupuesto son Incorrectos"/> : null}
+            
             <div className="form-group">
                 <label htmlFor="nombre">Nombre Gasto</label>
-                <input type="text" autofocus onChange={ e => guardarNombre(e.target.value) } value={nombre} name="nombre" className="form-control" placeholder="Ej. Transporte"/>
+                <input type="text" autoFocus onChange={ e => guardarNombre(e.target.value) } value={nombre} name="nombre" className="form-control" placeholder="Ej. Transporte"/>
             </div>
             <div className="form-group">
                 <label htmlFor="cantidad">Cantidad Gasto</label>

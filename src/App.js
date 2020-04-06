@@ -24,6 +24,7 @@ function App() {
         //resta del presupuesto actual
         const presupuestoRestante = restante - gasto.cantidad;
         guardarRestante(presupuestoRestante);
+        console.log(`Restante: ${restante}: Gasto a restar: ${gasto.cantidad} PresupuestoRestante: ${presupuestoRestante}`);
 
         //Despues que se cambie en el componente Formulario Resetealo a false
         guardarCrearGasto(false);

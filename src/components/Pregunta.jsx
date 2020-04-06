@@ -31,7 +31,6 @@ const Pregunta = ({ guardarRestante, guardarPresupuesto, actualizarPregunta}) =>
         guardarPresupuesto(cantidad) ;
         guardarRestante(cantidad);
         actualizarPregunta(false);
-    
     }
 
     //version corta
@@ -43,7 +42,7 @@ const Pregunta = ({ guardarRestante, guardarPresupuesto, actualizarPregunta}) =>
                 <div className="form-group">
                     {/* version corta de onChange de una sola lina */}
                     {/* <input onChange={e=>guardarCantidad(parseInt(e.target.value))} type="number" className="form-control" placeholder="Coloca tu presupuesto"/> */}
-                    <input onChange={definirPresupuesto} autofocus type="number" className="form-control" placeholder="Coloca tu presupuesto"/>
+                    <input onChange={definirPresupuesto} autoFocus type="number" className="form-control" placeholder="Coloca tu presupuesto"/>
                 </div>
                 <button onClick={agregarPresupuesto} type="submit" className="btn btn-block btn-primary">Definir presupuesto</button>
             </form>
