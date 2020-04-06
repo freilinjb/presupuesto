@@ -29,7 +29,7 @@ function App() {
         //Despues que se cambie en el componente Formulario Resetealo a false
         guardarCrearGasto(false);
       }
-    }, [gasto]);
+    }, [gasto, gastos, restante, crearGasto]);
 
   return (
     <div className="container">
@@ -52,7 +52,7 @@ function App() {
             <div className="col-lg-6 lg-sm-12">
               <Listado gastos={gastos}/>
 
-              <ControlPresupuesto presupuesto={presupuesto} restante={ }/>
+              <ControlPresupuesto presupuesto={presupuesto} restante={restante}/>
             </div>
          </div>
          )
