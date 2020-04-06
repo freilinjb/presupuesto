@@ -27,11 +27,11 @@ const Formulario = ({agregarNuevoGasto}) => {
             nombre,
             cantidad,
             id: shortId()
-        }
-        console.log(gasto);
-        
+        }        
 
         //pasar el gasto al componente principal
+        agregarNuevoGasto(gasto);
+
 
         //resetear el form
     }

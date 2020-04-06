@@ -13,7 +13,7 @@ function App() {
 
   //cuando agregamos un nuevo gasto
   const agregarNuevoGasto = gasto => {
-      console.log(gasto);
+    guardarGastos([...gastos,gasto]);
   }
 
 
