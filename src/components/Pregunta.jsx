@@ -1,4 +1,5 @@
-import React,{ Fragment, useState} from 'react'
+import React,{ Fragment, useState} from 'react';
+import PropTypes from 'prop-types';
 import Error from './Error';
 
 //Se crea loca porque no pasa por los diferentes componentes
@@ -50,5 +51,12 @@ const Pregunta = ({ guardarRestante, guardarPresupuesto, actualizarPregunta}) =>
         </Fragment>
      );
 }
+
+Pregunta.propTypes = {
+    guardarRestante: PropTypes.func.isRequired,
+    guardarPresupuesto: PropTypes.func.isRequired,
+    actualizarPregunta: PropTypes.func.isRequired
+}
+ 
  
 export default Pregunta;
