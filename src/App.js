@@ -22,7 +22,7 @@ function App() {
 
 
         //resta del presupuesto actual
-        const presupuestoRestante = restante = gasto.cantidad;
+        const presupuestoRestante = restante - gasto.cantidad;
         guardarRestante(presupuestoRestante);
 
         //Despues que se cambie en el componente Formulario Resetealo a false
