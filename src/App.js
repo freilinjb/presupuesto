@@ -37,7 +37,6 @@ function App() {
               <Formulario agregarNuevoGasto={agregarNuevoGasto}/>
             </div>
             <div className="col-lg-6 lg-sm-12">
-              <h2>Listado</h2>
               <Listado gastos={gastos}/>
             </div>
          </div>

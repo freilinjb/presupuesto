@@ -45,7 +45,7 @@ const Formulario = ({agregarNuevoGasto}) => {
             { error ? <Error mensaje ="Ambos campos son obligatorios o Presupuesto son Incorrectos"/> : null}
             <div className="form-group">
                 <label htmlFor="nombre">Nombre Gasto</label>
-                <input type="text" onChange={ e => guardarNombre(e.target.value) } value={nombre} name="nombre" className="form-control" placeholder="Ej. Transporte"/>
+                <input type="text" autofocus onChange={ e => guardarNombre(e.target.value) } value={nombre} name="nombre" className="form-control" placeholder="Ej. Transporte"/>
             </div>
             <div className="form-group">
                 <label htmlFor="cantidad">Cantidad Gasto</label>
