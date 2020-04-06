@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Pregunta from './components/Pregunta';
 import Formulario from './components/Formulario';
+import Listado from './components/Listado';
  
 function App() {
 
@@ -36,7 +37,10 @@ function App() {
               <Formulario agregarNuevoGasto={agregarNuevoGasto}/>
             </div>
             <div className="col-lg-6 lg-sm-12">
-              2
+              <h2>Listado</h2>
+              { gastos.map(gasto =>(
+                <Listado/>
+              ))}
             </div>
          </div>
          )
