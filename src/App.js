@@ -38,9 +38,7 @@ function App() {
             </div>
             <div className="col-lg-6 lg-sm-12">
               <h2>Listado</h2>
-              { gastos.map(gasto =>(
-                <Listado/>
-              ))}
+              <Listado gastos={gastos}/>
             </div>
          </div>
          )
