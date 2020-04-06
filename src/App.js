@@ -11,12 +11,18 @@ function App() {
   const [ restante, guardarRestante ] = useState(0);
   const [mostrarpregunta, actualizarPregunta] = useState(true);
   const [ gasto, guardarGasto ] = useState({});
-
   const [ gastos, guardarGastos ] = useState([]);
+  const [ crearGasto, guardarCrearGasto ] = useState(false);
 
     //UseEffect que actualiza el restante
     useEffect(() => {
-      guardarGastos([...gastos,gasto]);
+      if(crearGasto) {
+        guardarGastos([...gastos,gasto]);
+
+        //Despues que se cambie en el componente Formulario 
+        //Resetealo a false
+        guardarCrearGasto(false);
+      }
     }, [gasto]);
 
   return (
@@ -35,7 +41,7 @@ function App() {
          (
           <div className="row justify-content-center">
             <div className="col-lg-6 lg-sm-12">
-              <Formulario guardarGasto={guardarGasto}/>
+              <Formulario guardarGasto={guardarGasto} guardarCrearGasto={guardarCrearGasto}/>
             </div>
             <div className="col-lg-6 lg-sm-12">
               <Listado gastos={gastos}/>
