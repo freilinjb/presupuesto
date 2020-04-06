@@ -52,7 +52,7 @@ function App() {
             <div className="col-lg-6 lg-sm-12">
               <Listado gastos={gastos}/>
 
-              <ControlPresupuesto presupuesto={presupuesto} restante={restante}/>
+              <ControlPresupuesto presupuesto={presupuesto} restante={ }/>
             </div>
          </div>
          )
